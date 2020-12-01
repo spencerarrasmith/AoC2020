@@ -49,6 +49,7 @@ def part2():
         for entry in larger:
             for entry2 in smaller:
                 if entry + entry2 == newtarget:
+                    found = True
                     print(current * entry * entry2)
 
 part2()
