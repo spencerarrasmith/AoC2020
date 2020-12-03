@@ -1,25 +1,35 @@
-# --- Day 1: Balls ---
+# --- Day 1: Report Repair ---
 #
-#   Part 1: Expand IntCode computer with in/out and parameter modes
-#   Part 2: Add jumps and comparisons
+#   Part 1: Match two numbers to add to 2020
+#   Part 2: Match three numbers to add to 2020
 #
+
+#import bpy
+import os
+
+os.chdir('D:\\Projects\\AdventOfCode2020')
+os.chdir('20201201')
 
 target = 2020
 testinput = [1721, 979, 366, 299, 675, 1456]
 
-f = open("input.txt", 'r')
-rawdata = f.read().split('\n')
-f.close()
+import sys
+sys.path.append("..")
 
-rawdata = rawdata[:-1]
+from AoCCommon.InputToArray import InputToArray
 
-rawdata = [int(x) for x in rawdata]
+a = InputToArray(mode='int')
+
+rawdata = a.array
 
 def part1():
     smaller = []
     larger = []
 
-    for entry in rawdata:
+    for i,entry in enumerate(rawdata):
+        #bpy.ops.mesh.primitive_cube_add(size=2, enter_editmode=False, align='WORLD', location=(i*2, 0, entry/2), scale=(1, 1, entry))
+
+        
         if entry < target/2:
             smaller.append(entry)
         else:
@@ -52,4 +62,4 @@ def part2():
                     found = True
                     print(current * entry * entry2)
 
-part2()
+part1()
