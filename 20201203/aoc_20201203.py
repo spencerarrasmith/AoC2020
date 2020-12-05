@@ -1,8 +1,8 @@
 
 # --- Day 3: ####### ---
 #
-#   Part 1:
-#   Part 2:
+#   Part 1: Count trees hit down path through tiled hillside
+#   Part 2: Count trees hit down multiple paths
 #
 
 import sys

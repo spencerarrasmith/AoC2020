@@ -1,8 +1,8 @@
 
 # --- Day 4: Passport Processing ---
 #
-#   Part 1:
-#   Part 2:
+#   Part 1: Determine valid passports by data keys
+#   Part 2: Determine valid passports by data
 #
 
 import sys
