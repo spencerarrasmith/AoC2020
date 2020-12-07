@@ -47,12 +47,15 @@ def part2():
         column = int(column,2)
         plane[row][column] += 1
 
+    for i,seats in enumerate(plane):
+        print(i,seats)
+
     for i, seats in enumerate(plane):
         if 0 in seats and seats.count(0) == 1:
             print("SeatID: ", i*8+seats.index(0))
         if seats.count(0) > 1:                          # for a case like [0,0,0,1,1,0,1,1]
             if 1 in seats:
-                if(seats[::-1].index(1) > seats[::-1].index(0)):
+                if(seats[::-1].index(1) < seats[::-1].index(0)):
                     print("SeatID: ", i * 8 + (len(seats)-seats[::-1].index(0)))
 
 part2()

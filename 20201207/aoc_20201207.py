@@ -35,6 +35,7 @@ class BagOf():
     def addContain(self, color, qty):
         self.contains[color] = qty
 
+
 def part1():
     rules = testrules.split('\n')
     rules = [x for x in rules if x]
@@ -72,9 +73,10 @@ def part1():
                     if possibility not in processed:
                         possibilities.add(bag.color)
                         print(bag.color)
+
             processed.add(possibility)
 
-    print(len(processed))
+    print("Containing bags:", len(processed))
 
 
 testrules2 =\
@@ -120,8 +122,8 @@ def part2():
                 if color == bag.color:
                     for i in range(current.contains[color]):
                         unprocessed.append(bag)
-                        total
+                        #total += 1
 
-    print(total)
+    print("Bags inside:", total)
 
 part2()
