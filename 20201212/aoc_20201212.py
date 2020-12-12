@@ -1,8 +1,8 @@
 
-# --- Day 12: ####### ---
+# --- Day 12: Rain Risk ---
 #
-#   Part 1:
-#   Part 2:
+#   Part 1: Navigate ferry with steering commands
+#   Part 2: Navigate ferry with steering commands relative to waypoint
 #
 
 import sys
